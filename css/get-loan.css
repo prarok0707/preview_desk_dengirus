@@ -26,6 +26,8 @@
     --button-background-primary-hover: #c3492a;
     --button-background-dark: #2f3c44;
     --button-background-dark-hover: #1f272d;
+    --input-font-size: 18px;
+    --input-font-size-label: 14px;
     --input-font-color: #2f3c44;
     --input-placeholder-font-color: #798389;
     --input-border-color: #c8c8c8;
@@ -292,12 +294,6 @@ body.no-scroll {
   </label>
 </div>
 */
-@media (any-hover: hover) {
-    .input:hover .input__border {
-        border-color: var(--input-border-color-active);
-    }
-}
-
 .input.error .input__border {
     border-color: var(--input-border-color-error);
 }
@@ -312,47 +308,37 @@ body.no-scroll {
 }
 
 .input__body {
-    padding: 0.833em 0;
+    padding: 10px 0;
     display: block;
-    font-size: 0.75rem;
     font-weight: 500;
     font-style: normal;
     line-height: normal;
-    cursor: pointer;
     color: var(--input-font-color);
     position: relative;
-}
-
-@media (min-width: 768px) {
-    .input__body {
-        font-size: 0.875rem;
-    }
+    background-color: var(--background-primary);
+    border-radius: var(--input-border-radius);
 }
 
 .input__label {
-    padding: 0 1.25em;
-    margin: 0 0 2px 0;
+    padding: 0 15px;
+    margin: 0 0 4px 0;
     display: block;
-    font-size: 1em;
-}
-
-@media (min-width: 768px) {
-    .input__label {
-        padding: 0 1.667em;
-        font-size: 0.75rem;
-    }
+    font-size: var(--input-font-size-label);
 }
 
 .input__main {
     width: 100%;
     height: 100%;
-    padding: 0 1.25em;
+    padding: 0 15px;
     display: block;
-    font-size: 1em;
+    font-size: var(--input-font-size);
     font-weight: inherit;
     color: inherit;
+    position: relative;
+    z-index: 2;
     border: none;
     outline: none;
+    background: none;
 }
 
 .input__main:not(textarea) {
@@ -378,14 +364,8 @@ body.no-scroll {
     border-color: var(--input-border-color-active);
 }
 
-@media (min-width: 768px) {
-    .input__main {
-        padding: 0 1.429em;
-    }
-}
-
 textarea.input__main {
-    height: 5em;
+    height: 80px;
     resize: none;
 }
 
@@ -396,6 +376,7 @@ textarea.input__main {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     border: 1px solid var(--input-border-color);
     border-radius: var(--input-border-radius);
     transition: border 0.15s linear;
@@ -1391,21 +1372,26 @@ textarea.input__main {
 }
 
 .footer__header {
+    background-color: var(--color-01);
+}
+
+.footer__header-wrapper {
     display: flex;
 }
 
 @media (max-width: 1200px) {
-    .footer__header {
+    .footer__header-wrapper {
+        max-width: calc(var(--max-width-container) + var(--container-padding) * 2);
         min-height: var(--header-height);
         padding: 0 var(--container-padding);
+        margin: 0 auto;
         align-items: center;
         justify-content: space-between;
-        background-color: var(--color-01);
     }
 }
 
 @media (min-width: 1200px) {
-    .footer__header {
+    .footer__header-wrapper {
         margin: 0 10px 0 0;
         flex-direction: column;
         align-items: flex-start;
@@ -1594,12 +1580,13 @@ textarea.input__main {
 }
 
 .footer__info-text {
+    margin: 0 auto 1.25em auto;
     text-align: justify;
     color: var(--font-color-primary);
 }
 
-.footer__info-text:not(:last-child) {
-    margin: 0 0 1.25em 0;
+.footer__info-text:last-child {
+    margin: 0 auto;
 }
 
 .footer__info-text a {
@@ -1624,6 +1611,7 @@ textarea.input__main {
 
 @media (max-width: 1200px) {
     .footer__info-text {
+        max-width: var(--max-width-container);
         padding: 1.25em;
         border-radius: 0.583em;
         background-color: var(--background-primary);

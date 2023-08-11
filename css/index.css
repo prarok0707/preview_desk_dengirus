@@ -24,6 +24,8 @@
     --button-background-primary-hover: #c3492a;
     --button-background-dark: #2f3c44;
     --button-background-dark-hover: #1f272d;
+    --input-font-size: 18px;
+    --input-font-size-label: 14px;
     --input-font-color: #2f3c44;
     --input-placeholder-font-color: #798389;
     --input-border-color: #c8c8c8;
@@ -2063,21 +2065,26 @@ body.no-scroll {
 }
 
 .footer__header {
+    background-color: var(--color-01);
+}
+
+.footer__header-wrapper {
     display: flex;
 }
 
 @media (max-width: 1200px) {
-    .footer__header {
+    .footer__header-wrapper {
+        max-width: calc(var(--max-width-container) + var(--container-padding) * 2);
         min-height: var(--header-height);
         padding: 0 var(--container-padding);
+        margin: 0 auto;
         align-items: center;
         justify-content: space-between;
-        background-color: var(--color-01);
     }
 }
 
 @media (min-width: 1200px) {
-    .footer__header {
+    .footer__header-wrapper {
         margin: 0 10px 0 0;
         flex-direction: column;
         align-items: flex-start;
@@ -2266,12 +2273,13 @@ body.no-scroll {
 }
 
 .footer__info-text {
+    margin: 0 auto 1.25em auto;
     text-align: justify;
     color: var(--font-color-primary);
 }
 
-.footer__info-text:not(:last-child) {
-    margin: 0 0 1.25em 0;
+.footer__info-text:last-child {
+    margin: 0 auto;
 }
 
 .footer__info-text a {
@@ -2296,6 +2304,7 @@ body.no-scroll {
 
 @media (max-width: 1200px) {
     .footer__info-text {
+        max-width: var(--max-width-container);
         padding: 1.25em;
         border-radius: 0.583em;
         background-color: var(--background-primary);
