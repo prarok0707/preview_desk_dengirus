@@ -292,6 +292,12 @@ body.no-scroll {
   </label>
 </div>
 */
+@media (any-hover: hover) {
+    .input:hover .input__border {
+        border-color: var(--input-border-color-active);
+    }
+}
+
 .input.error .input__border {
     border-color: var(--input-border-color-error);
 }
@@ -312,6 +318,7 @@ body.no-scroll {
     font-style: normal;
     line-height: normal;
     color: var(--input-font-color);
+    cursor: pointer;
     position: relative;
     background-color: var(--background-primary);
     border-radius: var(--input-border-radius);
