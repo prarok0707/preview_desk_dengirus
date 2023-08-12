@@ -444,8 +444,10 @@ textarea.input__main {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border: 1px solid var(--input-border-color);
     border-radius: var(--input-border-radius);
+    transition: border 0.15s linear;
 }
 
 .checkbox__icon svg {
@@ -460,6 +462,12 @@ textarea.input__main {
     transition: opacity 0.2s linear, visibility 0.2s linear, transform 0.2s linear;
 }
 
+@media (any-hover: hover) {
+    .checkbox__icon:hover {
+        border-color: var(--input-border-color-active);
+    }
+}
+
 .checkbox__label {
     font-size: 1em;
     font-weight: 500;
@@ -470,6 +478,13 @@ textarea.input__main {
 
 .checkbox__label span {
     color: var(--input-checkbox-fill);
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .checkbox__label span:hover {
+        text-decoration: underline;
+    }
 }
 
 .wrapper {

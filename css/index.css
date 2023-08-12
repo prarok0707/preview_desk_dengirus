@@ -460,6 +460,12 @@ body.no-scroll {
     transition: background 0.2s linear;
 }
 
+@media (any-hover: hover) {
+    .slider-pagination .swiper-pagination-bullet:hover {
+        --swiper-pagination-bullet-inactive-color: var(--color-13);
+    }
+}
+
 @media (min-width: 768px) {
     .slider-pagination {
         --swiper-pagination-bullet-width: 25px;
