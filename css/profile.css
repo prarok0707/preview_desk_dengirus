@@ -841,7 +841,7 @@ textarea.input__main {
     }
 
     .form__actions .form__submit {
-        margin: 0;
+        margin: 0 0 0 auto;
     }
 }
 
