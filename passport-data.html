@@ -12,7 +12,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="" />
     <title>Проверка данных</title>
-    <link rel="stylesheet" href="./css/passport-data.min.css" />
+    <link rel="stylesheet" href="./css/insides.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -175,91 +175,22 @@
                 </div>
                 <h3 class="form__title">Адрес регистрации</h3>
                 <div class="form__selects">
-                  <div class="form__select select" data-select>
-                    <div class="select__header" data-select-header>
-                      <div class="select__data">
-                        <input
-                          class="select__input"
-                          type="text"
-                          data-select-input
-                        />
-                        <span class="select__label">Регион</span>
-                        <span
-                          class="select__text"
-                          data-select-text="Выберите регион"
-                          >Текст</span
-                        >
-                      </div>
-                      <div class="select__icon">
-                        <svg>
-                          <use
-                            href="./images/sprite.svg#arrow"
-                            xlink:href="./images/sprite.svg#arrow"
-                          ></use>
-                        </svg>
-                      </div>
+                  <div class="select2-custom-main select2-custom">
+                    <span class="select2-custom__label">Регион</span>
+                    <div class="select2-custom__icon">
+                      <svg>
+                        <use
+                          href="./images/sprite.svg#arrow"
+                          xlink:href="./images/sprite.svg#arrow"
+                        ></use>
+                      </svg>
                     </div>
-                    <ul class="select__options" data-select-options>
-                      <div
-                        class="select__options-wrapper"
-                        data-overlayscrollbars
-                      >
-                        <li
-                          class="select__option"
-                          data-select-option="option_1"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_2"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_3"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_4"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_5"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_6"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_7"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_8"
-                        >
-                          Нижний Новогород
-                        </li>
-                        <li
-                          class="select__option"
-                          data-select-option="option_9"
-                        >
-                          Нижний Новогород
-                        </li>
-                      </div>
-                    </ul>
+                    <select class="select2-custom__target">
+                      <option value="Нижний Новогород">Нижний Новогород</option>
+                      <option value="Нижний Новогород">Нижний Новогород</option>
+                      <option value="Нижний Новогород">Нижний Новогород</option>
+                      <option value="Нижний Новогород">Нижний Новогород</option>
+                    </select>
                   </div>
                 </div>
                 <div class="form__inputs">
@@ -442,6 +373,6 @@
         </div>
       </footer>
     </div>
-    <script src="./js/passport-data.js"></script>
+    <script src="./js/insides.js"></script>
   </body>
 </html>
